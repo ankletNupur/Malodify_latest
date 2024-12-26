@@ -15,7 +15,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- This line sets the title of the webpage that appears in the browser tab -->
-  <title>Spotify - Your favourite music is here</title>
+  <title>Melodify - Your favourite music is here</title>
 
   <!-- This line links the external CSS file to style the webpage -->
   <link rel="stylesheet" href="style.css" />
@@ -43,26 +43,6 @@
       <!-- This code block defines the list of songs and their details -->
       <div class="songItemContainer">
 
-        <!-- <div class="songItem">
-            <img alt="1" />
-            <span class="songName">Taylor swift- Blank space</span>
-            <span class="songlistplay"
-              ><span class="timestamp"
-                >04:30
-                <i id="0" class="far songItemPlay fa-play-circle"></i> </span
-            ></span>
-          </div> -->
-
-        <!-- <div class="songItem" onclick="playSong('audio0', this)">
-          <img alt="1" />
-          <span class="songName">Taylor Swift - Blank Space</span>
-          <span class="songlistplay">
-            <span class="timestamp">04:30</span>
-          </span>
-          
-          <audio id="audio0" src="1.mp3"></audio>
-        </div> -->
-
         <div style="cursor: pointer;" class="songItem" onclick="playSong('audio0', this)">
           <img alt="1" />
           <span class="songName">Taylor Swift - Blank Space</span>
@@ -73,24 +53,36 @@
             <i class="far songItemPlay fa-play-circle" id="playPause-audio0"></i>
           </span>
           <!-- Audio element for the song -->
-          <audio id="audio0" src="1.mp3" ontimeupdate="updateTime('audio0')"></audio>
+          <audio id="audio0" src="./songs/1.mp3" ontimeupdate="updateTime('audio0')"></audio>
         </div>
-        
 
-        <div class="songItem">
+        <div style="cursor: pointer;" class="songItem" onclick="playSong('audio1', this)">
           <img alt="1" />
           <span class="songName">ED Shereen - Shape of you</span>
-          <span class="songlistplay"><span class="timestamp">04:22
-              <i id="1" class="far songItemPlay fa-play-circle"></i> </span></span>
+          <span class="songlistplay">
+            <!-- Real-time duration -->
+            <span class="timestamp" id="time-audio1">00:00 / 00:00</span>
+            <!-- Play/Pause button -->
+            <i class="far songItemPlay fa-play-circle" id="playPause-audio1"></i>
+          </span>
+          <!-- Audio element for the song -->
+          <audio id="audio1" src="./songs/2.mp3" ontimeupdate="updateTime('audio1')"></audio>
         </div>
-        <div class="songItem">
+
+
+        <div style="cursor: pointer;" class="songItem" onclick="playSong('audio2', this)">
           <img alt="1" />
           <span class="songName">Tones and I - Dance monkey</span>
-          <span class="songlistplay"><span class="timestamp">03:29
-              <!-- <i id="2" class="fas songItemPlay fa-2x fa-play-circle"></i> -->
-              <i id="2" class="far songItemPlay fa-play-circle"></i>
-            </span></span>
+          <span class="songlistplay">
+            <!-- Real-time duration -->
+            <span class="timestamp" id="time-audio2">00:00 / 00:00</span>
+            <!-- Play/Pause button -->
+            <i class="far songItemPlay fa-play-circle" id="playPause-audio2"></i>
+          </span>
+          <!-- Audio element for the song -->
+          <audio id="audio2" src="./songs/3.mp3" ontimeupdate="updateTime('audio2')"></audio>
         </div>
+        
         <div class="songItem">
           <img alt="1" />
           <span class="songName">Dua Lipa - Levetating</span>
