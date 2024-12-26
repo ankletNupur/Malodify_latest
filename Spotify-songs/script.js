@@ -105,3 +105,33 @@ document.getElementById('previous').addEventListener('click', ()=>{
     masterPlay.classList.remove('fa-play-circle');
     masterPlay.classList.add('fa-pause-circle');
 })
+
+ //////////////////////////////////////////////////////////////////////////
+
+ function playSong(audioId, songItem) {
+
+    let currentAudio = null;
+
+   console.log(audioId , "audioId");
+
+   const audioElement = document.getElementById(audioId);
+
+   // Pause the currently playing song (if any)
+   if (currentAudio && currentAudio !== audioElement) {
+     currentAudio.pause();
+     currentAudio.parentElement.classList.remove("playing");
+   }
+
+   // Toggle play/pause for the selected song
+   if (audioElement.paused) {
+     audioElement.play();
+     songItem.classList.add("playing"); // Add a playing class to the div
+     currentAudio = audioElement;
+   } else {
+     audioElement.pause();
+     songItem.classList.remove("playing");
+     currentAudio = null;
+   }
+ }
+
+ /////////////////////////////////////////////////////////////////////////////////
