@@ -58,7 +58,7 @@ class Footer extends HTMLElement{
 								<a href="./help.html">Help</a>
 							</div>
 							<div>
-								<a href="./Spotify-songs/songs.html">Web Player</a>
+								<a href="./Malodify-songs/songs.html">Web Player</a>
 							</div>
 							<div>
 								<a href=""
@@ -105,7 +105,7 @@ class Footer extends HTMLElement{
 								<a href="" class="">About Ads</a>
 							</li>
 						</ul>
-						<span> © 2023 Spotify IN </span>
+						<span> © 2023 Malodify IN </span>
 					</div>
 				</div>
 			</div>

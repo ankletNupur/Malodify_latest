@@ -17,7 +17,7 @@ class Header extends HTMLElement{
 								<a class="navigation-link" href="./premium.html">Premium</a>
 							</li>
 							<li>
-								<a class="navigation-link" href="./Spotify-songs/songs.html">Songs</a>
+								<a class="navigation-link" href="./Malodify-songs/songs.html">Songs</a>
 							</li>
 							<li>
 								<a class="navigation-link" href="./help.html">Help</a>
@@ -44,7 +44,7 @@ class Header extends HTMLElement{
 								<div id="profileMenu" class="profileMenu">
 									<ul class="">
 										<li class="">
-											<a class="" href="./Spotify-songs/songs.html">Welcome</a> 
+											<a class="" href="./Malodify-songs/songs.html">Welcome</a> 
 										</li>
 								
 									</ul>
