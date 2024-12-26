@@ -140,24 +140,41 @@ document.getElementById('previous').addEventListener('click', ()=>{
 
 function playSong(audioId, songItem) {
 
+  let songs_id_array = 
+  [
+   `audio0`,
+   `audio1`,
+   `audio2`,
+   `audio3`,
+   `audio4`,
+   `audio5`,
+   `audio6`,
+   `audio7`,
+   `audio8`,
+   `audio9`
+  ];
+  
   let currentAudio = null;
 
   const audioElement = document.getElementById(audioId);
   const playPauseIcon = document.getElementById(`playPause-${audioId}`);
-
-  // Pause the currently playing song (if any)
-  if (currentAudio && currentAudio !== audioElement) {
-    currentAudio.pause();
-    document
-      .getElementById(`playPause-${currentAudio.id}`)
-      .classList.replace("fa-pause-circle", "fa-play-circle");
-  }
 
   // Toggle play/pause for the selected song
   if (audioElement.paused) {
     audioElement.play();
     playPauseIcon.classList.replace("fa-play-circle", "fa-pause-circle");
     currentAudio = audioElement;
+
+    //Pause all songs
+    for(let record of songs_id_array)
+    {
+       if(audioId != record )
+       {
+          let audioEle = document.getElementById(record);
+          audioEle.pause();
+       }
+    }
+
   } else {
     audioElement.pause();
     playPauseIcon.classList.replace("fa-pause-circle", "fa-play-circle");
