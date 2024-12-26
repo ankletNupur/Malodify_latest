@@ -7,7 +7,7 @@ class Header extends HTMLElement{
 			<div class="container">
 				<div class="header">
 					<span style="margin-bottom:31px" class="logo">
-						<a href="./index.html">
+						<a href="./dashboard.html">
 							<img src="../assets/Melodify_svg_logo.svg" alt="SVG Logo" width="70">
 						</a>
 					</span>
@@ -44,7 +44,7 @@ class Header extends HTMLElement{
 								<div id="profileMenu" class="profileMenu">
 									<ul class="">
 										<li class="">
-											<a class="" href="./Malodify-songs/songs.html">Welcome</a> 
+											<a class="" href="../index.html">Logout</a> 
 										</li>
 								
 									</ul>
@@ -81,17 +81,16 @@ class Header extends HTMLElement{
 						</li>
 						<li class="h_separator"></li>
 						<li>
-							<a class="sidenav-link light" href="#">Welcome</a>
+							<a class="sidenav-link light" href="#">Welcome1</a>
+						</li>
+						<li>
+								<a class="sidenav-link light" href="#">Welcome</a>
 						</li>
 						<li>
 							<a class="sidenav-link light son" href="./index.html"
 								>Logout</a
 							>
-						</li>
-					</ul>
-					<span class="sidenav-logo">
-						<a href="./index.html">
-							<svg
+vg
 								viewBox="0 0 63 20"
 								xmlns="http://www.w3.org/2000/svg"
 								preserveAspectRatio="xMidYMin meet"
