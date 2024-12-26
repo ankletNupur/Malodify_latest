@@ -53,15 +53,29 @@
             ></span>
           </div> -->
 
-        <div class="songItem" onclick="playSong('audio0', this)">
+        <!-- <div class="songItem" onclick="playSong('audio0', this)">
           <img alt="1" />
           <span class="songName">Taylor Swift - Blank Space</span>
           <span class="songlistplay">
             <span class="timestamp">04:30</span>
           </span>
-          <!-- Audio element for the song -->
+          
           <audio id="audio0" src="1.mp3"></audio>
+        </div> -->
+
+        <div style="cursor: pointer;" class="songItem" onclick="playSong('audio0', this)">
+          <img alt="1" />
+          <span class="songName">Taylor Swift - Blank Space</span>
+          <span class="songlistplay">
+            <!-- Real-time duration -->
+            <span class="timestamp" id="time-audio0">00:00 / 00:00</span>
+            <!-- Play/Pause button -->
+            <i class="far songItemPlay fa-play-circle" id="playPause-audio0"></i>
+          </span>
+          <!-- Audio element for the song -->
+          <audio id="audio0" src="1.mp3" ontimeupdate="updateTime('audio0')"></audio>
         </div>
+        
 
         <div class="songItem">
           <img alt="1" />

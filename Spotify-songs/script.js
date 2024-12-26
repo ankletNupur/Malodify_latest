@@ -135,3 +135,46 @@ document.getElementById('previous').addEventListener('click', ()=>{
  }
 
  /////////////////////////////////////////////////////////////////////////////////
+
+
+
+function playSong(audioId, songItem) {
+
+  let currentAudio = null;
+
+  const audioElement = document.getElementById(audioId);
+  const playPauseIcon = document.getElementById(`playPause-${audioId}`);
+
+  // Pause the currently playing song (if any)
+  if (currentAudio && currentAudio !== audioElement) {
+    currentAudio.pause();
+    document
+      .getElementById(`playPause-${currentAudio.id}`)
+      .classList.replace("fa-pause-circle", "fa-play-circle");
+  }
+
+  // Toggle play/pause for the selected song
+  if (audioElement.paused) {
+    audioElement.play();
+    playPauseIcon.classList.replace("fa-play-circle", "fa-pause-circle");
+    currentAudio = audioElement;
+  } else {
+    audioElement.pause();
+    playPauseIcon.classList.replace("fa-pause-circle", "fa-play-circle");
+    currentAudio = null;
+  }
+}
+
+function updateTime(audioId) {
+  const audioElement = document.getElementById(audioId);
+  const timestamp = document.getElementById(`time-${audioId}`);
+  const currentTime = formatTime(audioElement.currentTime);
+  const duration = formatTime(audioElement.duration || 0);
+  timestamp.textContent = `${currentTime} / ${duration}`;
+}
+
+function formatTime(seconds) {
+  const mins = Math.floor(seconds / 60);
+  const secs = Math.floor(seconds % 60).toString().padStart(2, "0");
+  return `${mins}:${secs}`;
+}
